@@ -1,17 +1,29 @@
-
-def sortlist(lista):
-    n=len(lista)
+#function for sorting list items in ascending order
+def sortasc(numbers):
+    num=numbers
+    n=len(num)
+    sorted = []
     for i in range(n):
-        for j in range(1,n-i):
-            if lista[j-1]>lista[j]:
-                (lista[j-1],lista[j])=(lista[j],lista[j-1])
-    return lista
-'''
-if __name__=='__main__':
-    mylist=[64, 25, 12, 22, 11, 1,2,44,3,122, 23, 34]
-    print("Before Sorting: ")
-    print(mylist)
-    sort_mylist=sortlist(mylist)
-    print("After Sorting: ")
-    print(sort_mylist)
-'''
+        min = num[0]
+        for j in range(len(num)):
+            if num[j]<min:
+                min=num[j]
+        sorted.append(min)
+        num.remove(min)
+
+    return sorted
+
+#function for sorting list items in descending order:
+def sortdesc(numbers):
+    num= numbers
+    n=len(num)
+    sorted=[]
+    for i in range(n):
+        max=num[0]
+        for j in range(len(num)):
+            if num[j]>max:
+                max=num[j]
+        sorted.append(max)
+        num.remove(max)
+
+    return sorted    
