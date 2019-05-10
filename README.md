@@ -1,4 +1,4 @@
-# sortfunction
+# Sorting list without using default python sort function
 ## Functions:
 * sortasc: 
 This function allows list of numbers to sort in ascending order.<br>
